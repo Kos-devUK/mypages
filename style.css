@@ -1,0 +1,842 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@1,300&family=Handjet&family=Inconsolata:wght@600&display=swap');
+
+
+/*  ------------------------ Responsive --------------------------    */
+@media (max-width:739px) and (min-width:319px){
+    #developmentSkills{
+        display: flex;
+        flex-direction: column;
+    }
+    #textHTML:hover .removeTxt {
+        display: none;
+        }
+    #textCSS:hover .removeTxt {
+        display: none;
+        }
+    #textJS:hover .removeTxt {
+        display: none;
+        }
+    #textDataBase:hover .removeTxt {
+        display: none;
+        }
+    #textPython:hover .removeTxt {
+        display: none;
+        }
+    #textAbleton:hover .removeTxt {
+        display: none;
+        }
+    #textKrita:hover .removeTxt {
+        display: none;
+        }
+    #textGit:hover .removeTxt {
+    display: none;
+    }
+}
+@media (max-width:1200px) and (min-width:319px)  {
+    .smallScreen ul {
+        margin-bottom: 10px;
+        display: block;
+    }
+    #welcome{
+    display: inline;
+    }
+    
+    #about{
+        display: inline;
+        width: 1%;
+        height: 2%;
+    }
+    #projects{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+    }
+    .picMQ{
+        top: 375px;   
+        max-width: 90px;
+        max-height: 90px;
+        display: block;
+        margin-left: 30px;
+
+    }
+}
+
+
+/*    ----------------------  HTML BODY !! -----------------*/
+
+html,body{
+    overflow-x: clip;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0%;
+    border: 0%;
+    font-size: 21px;
+    font-family:'Inconsolata', monospace ;
+    background-color:#d4d4d4;
+    color: rgba(34, 46, 80, 1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ----------------------------- Header !!!!! ------------------ */
+
+header {
+    z-index: 99;
+    background:  #ff0081;
+    position: sticky;
+    top: 1px;
+    transition: background-color 1s ease-in-out ;
+    border-radius: 0 0 5% 5% / 0 0 15% 15% ;
+}
+
+header.scrolled{
+    box-shadow: 0 0 21px 2px #ff0081;
+    opacity: 0.85;
+}
+
+header nav a { 
+    transition: color 1s ease-in-out;
+    color: #000000;
+}
+
+.dark header.scrolled { 
+    background-color: #ff0081;;
+    opacity: 0.65;
+}
+
+
+#logo {
+    display: block;
+    width: 68.4px;
+    height: 60px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -2vw;
+    left: 28vw;
+    font-size: 18px;
+    list-style-type: none;
+    width: 40vw;
+
+}
+.noDeco{
+    text-decoration: none;
+}
+/* ------------------  Toggle button!!! ------------------ */
+#toggle {
+    position: absolute;
+    height: 35px;
+    width: 70px;
+    top: 2.5vh;
+    right: 25vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+#toggle::before {
+    position: absolute;
+    background-color: antiquewhite;
+    content: "";
+    height: 30px;
+    width: 30px;
+    top: -52px;
+    border-radius: 100%;
+    transform: translateY(180%);
+    transition: all 0.5s ease-in-out;
+}
+
+#toggle.active::before {
+    left: calc(185% - 120px - 3%);
+    background-color:antiquewhite;
+
+}
+
+body.dark {
+    background-color: rgb(59, 73, 110);
+    color: rgb(234, 238, 237);
+}
+
+#bug {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 34px;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+
+#bugOutline {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    height: 28px;
+    width: 28px;
+    cursor: pointer;
+}
+
+#toggleEvent {
+    display: block; 
+    
+}
+
+/* -------------- welcome box----------------- */
+#top{
+    margin-top: -7%;
+}
+#topSection{
+    overflow: hidden;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(0deg,#6827b0, #ff0081);
+    box-shadow: 0 0 21px 2px rgb(84, 53, 99);
+    border-radius: 0 0 5% 5% / 0 0  15% 15% ;
+    
+}
+#topSection article{
+    z-index: 1;
+}
+
+
+#welcome {
+    display: inline;
+    position: relative;
+    top: 20px;
+}
+
+/* ----------------Typewriter effect -------------  */
+@keyframes typing {
+
+    0%,
+    3% {
+        content: "";
+    }
+
+    3.1%,
+    6% {
+        content: "H ";
+    }
+
+    6.1%,
+    9% {
+        content: "He ";
+    }
+
+    9.1%,
+    12% {
+        content: "Hel ";
+    }
+
+    12.1%,
+    15% {
+        content: "Hell ";
+    }
+
+    15.1%,
+    18% {
+        content: "Hello ";
+    }
+
+    18.1%,
+    21% {
+        content: "Hello W ";
+    }
+
+    21.1%,
+    24% {
+        content: "Hello Wo ";
+    }
+
+    24.1%,
+    27% {
+        content: "Hello Wor ";
+    }
+
+    27.1%,
+    30% {
+        content: "Hello Worl ";
+    }
+
+    30.1%,
+    33% {
+        content: "Hello World! ";
+    }
+
+    33.1%,
+    36% {
+        content: "Hello World! I ";
+    }
+
+    36.1%,
+    39% {
+        content: "Hello World! I a ";
+    }
+
+    39.1%,
+    41% {
+        content: "Hello World! I am ";
+    }
+
+    41.1%,
+    44% {
+        content: "Hello World! I am K ";
+    }
+
+    44.1%,
+    47% {
+        content: "Hello World! I am Ko ";
+    }
+
+    47.1%,
+    50% {
+        content: "Hello World! I am Kos ";
+    }
+
+    50.1%,
+    53% {
+        content: "Hello World! I am Kos ";
+    }
+
+    53.1%,
+    56% {
+        content: "Hello World! I am Kos ";
+    }
+
+    56.1%,
+    59% {
+        content: "Hello World! I am Kos ";
+    }
+
+    59.1%,
+    62% {
+        content: "Hello World! I am Kos ";
+    }
+
+    62.1%,
+    65% {
+        content: "Hello World! I am Ko ";
+    }
+
+    65.1%,
+    68% {
+        content: "Hello World! I am K ";
+    }
+
+    68.1%,
+    71% {
+        content: "Hello World! I am  ";
+    }
+
+    71.1%,
+    74% {
+        content: "Hello World! I  ";
+    }
+
+    74.1%,
+    77% {
+        content: "Hello World!  ";
+    }
+
+    77.1%,
+    80% {
+        content: "Hello World  ";
+    }
+
+    80.1%,
+    83% {
+        content: "Hello Worl ";
+    }
+
+    83.1%,
+    86% {
+        content: "Hello Wor ";
+    }
+
+    86.1%,
+    89% {
+        content: "Hello Wo ";
+    }
+
+    89.1%,
+    91% {
+        content: "Hello W ";
+    }
+
+    91.1%,
+    93% {
+        content: "Hello ";
+    }
+
+    93.1%,
+    96% {
+        content: "Hel  ";
+    }
+
+    96.1%,
+    100% {
+        content: "  ";
+    }
+
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+#typewriter { 
+    margin-bottom: -40px;
+    color: #00FF7E;
+    --caret: currentcolor;
+    font-family: 'Handjet', cursive;
+}
+
+#typewriter::before {
+    content: "";
+    animation: typing 10s forwards infinite;
+}
+
+#typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 1s infinite;
+}
+#topText{
+    color: #97D84F;
+}
+/* --------------------About Me box-------------------- */
+#aboutSection{   
+    display:inline-block; 
+    margin-top: 5%;
+    margin-bottom: 2.5%;
+}
+#profPic{  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    box-shadow: 0 0 21px 2px rgb(73, 74, 74);
+}
+.dark #profPic{
+    box-shadow: 0 0 21px 2px rgb(208, 206, 206);
+}
+
+/* ---------------- scroll to top button ----------------- */
+
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background: linear-gradient(5deg,#6827b0, #ff0081);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100%;
+    opacity: 70%;
+}
+
+#myBtn:hover {
+    background-color: #000000;
+}
+
+.dark #myBtn{
+    box-shadow: 0 0 21px 2px rgb(234, 222, 222);
+}
+/* --------------- get in touch button --------------  */
+
+#getSection{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+#getBtn {
+    cursor: pointer;
+    padding: 17px 40px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #fe2893 ;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    transition: all .5s ease;
+    font-family:'Inconsolata';
+}
+
+#getBtn:hover {
+    letter-spacing: 3px;
+    background-color: #6827b0;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.dark #getBtn:hover {
+    letter-spacing: 3px;
+    background-color: wheat;
+    color: #430e80;
+}
+.dark #getBtn{
+    box-shadow: 0 0 21px 2px rgb(221, 215, 215);
+}
+
+
+#getBtn:active {
+    letter-spacing: 3px;
+    background-color: #6827b0;
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+}
+
+/* ------------ Skills -------------------*/
+#allSkills{
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#devSection{
+    height: 2%;
+    border-radius: 5% 5% 5% 5% / 15% 15% 15% 15% ;
+    box-shadow: 0 0 21px 2px rgb(73, 74, 74);
+    padding: 2%;
+    width: 90%;
+    
+}
+.dark #devSection{
+    box-shadow: 0 0 21px 2px rgb(221, 215, 215);
+    background-color: rgb(89, 103, 141);
+}
+
+#developmentSkills {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 75px;
+    
+}
+
+#logoHTML {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+#textHTML p {
+    display: none;
+}
+
+#textHTML:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+#logoCSS {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+
+#textCSS p {
+    display: none;
+}
+
+#textCSS:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+#logoJS {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+
+#textJS p {
+    display: none;
+}
+
+#textJS:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+#logoDataBase {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+
+#textDataBase p {
+    display: none;
+}
+
+#textDataBase:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+#logoPython {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+
+#textPython p {
+    display: none;
+    margin-bottom: -50px;
+}
+
+#textPython:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+
+#otherSkillsSection{
+    height: 2%;
+    border-radius: 5% 5% 5% 5% / 15% 15% 15% 15% ;
+    box-shadow: 0 0 21px 2px rgb(73, 74, 74);
+    padding:  2%;
+    margin-top: 5%;
+    width: 90%;
+}
+
+.dark #otherSkillsSection{
+    box-shadow: 0 0 21px 2px rgb(221, 215, 215);
+    background-color: rgb(89, 103, 141);
+}
+
+#otherSkills {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#logoAbleton {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+
+#textAbleton p {
+    display: none;
+}
+
+#textAbleton:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+#logoKrita {
+    width: 90px;
+    height: 90px;
+    margin-right: 23px;
+}
+
+#textKrita p {
+    display: none;
+}
+
+#textKrita:hover p {
+    display: block;
+    margin-bottom: -50px;
+}
+
+#logoGit {
+    width: 90px;
+    height: 90px;
+}
+
+#textGit p {
+    display: none;
+}
+
+#textGit:hover p {
+    display: block;
+    margin-bottom: -50px;
+
+}
+
+
+/* ------------------------------- Projects ----------------- */
+#allProjects{
+    height: 2%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#projects {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#projectsSection{
+    
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height: 2%;
+    padding: 2%;
+    width: 90%;
+    border-radius: 5% 5% 5% 5% / 15% 15% 15% 15% ;
+    box-shadow: 0 0 21px 2px rgb(73, 74, 74);
+}
+.dark #projectsSection{
+    box-shadow: 0 0 21px 2px rgb(221, 215, 215);
+    background-color: rgb(89, 103, 141);
+}
+
+.projectSize{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+/* -------------- CV -------------------- */
+.btn {
+    width: 140px;
+    height: 50px;
+    background: linear-gradient(to top,#6827b0, #ff0081);
+    color: #fff;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-family:'Inconsolata', monospace ;
+}
+
+.btn span {
+    font-size: 16px;
+    letter-spacing: 1px;
+    transition: top 0.5s;
+}
+
+.btn-text-one {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.btn-text-two {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.btn:hover .btn-text-one {
+    top: -100%;
+}
+
+.btn:hover .btn-text-two {
+    top: 50%;
+}
+
+
+
+
+.dark .btn{
+    box-shadow: 0 0 21px 2px rgb(221, 215, 215);
+}
+
+#myCV:link {
+    text-decoration: none;
+    color: rgba(34, 46, 80, 1); 
+}
+
+#cvSection{
+    margin-top: 2.5%;
+    margin-bottom: 7.5%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/* --------------------Footer!!--------------- */
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    border-radius: 5% 5% 0 0/ 15% 15% 0 0;
+    background: linear-gradient(200deg,#ff0081 ,#6827b0);
+}
+
+#logoGithub {
+    width: 24px;
+    height: 24px;
+}
+
+#logoLinkedIn {
+    width: 24px;
+    height: 24px;
+}
+
+/*  ------------- transition ------------------------ */
+section{
+    place-items: center;
+    align-content: center;
+    min-height: 100%;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.hidden2{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 3s;
+}
+.show2{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
